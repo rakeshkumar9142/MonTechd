@@ -53,15 +53,15 @@ const Contact = () => {
   
 
   const openTelegram = () => {
-    window.open('https://t.me/montech_it', '_blank');
+    window.open('https://t.me/MonTech_IT_Bot', '_blank');
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/1234567890?text=Hi%20MonTech%20IT,%20I%20would%20like%20to%20discuss%20a%20project.', '_blank');
+    window.open('https://wa.me/77086570811?text=Привет%20MonTech%20IT,%20я%20хотел%20бы%20обсудить%20проект.', '_blank');
   };
 
   const openEmail = () => {
-    window.open('mailto:contact@montech-it.com?subject=Project%20Inquiry', '_blank');
+    window.open('mailto:montech.kz@gmail.com?subject=Project%20Inquiry', '_blank');
   };
 
   return (
