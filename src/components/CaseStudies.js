@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, TrendingUp, Users, Zap } from 'lucide-react';
+import { ExternalLink, TrendingUp } from 'lucide-react';
 
 const CaseStudies = () => {
   const caseStudies = [
