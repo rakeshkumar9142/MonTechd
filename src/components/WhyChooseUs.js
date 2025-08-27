@@ -1,31 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, Clock, Brain, Users } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation();
   const features = [
     {
       icon: DollarSign,
-      title: 'Pay Only After Results',
-      description: 'We believe in performance-based pricing. You only pay when you see tangible results and ROI.',
+      title: t('why.features.payAfter.title'),
+      description: t('why.features.payAfter.description'),
       color: 'from-green-500 to-emerald-600'
     },
     {
       icon: Clock,
-      title: 'Fast & Transparent Workflow',
-      description: 'Quick turnaround times with complete transparency throughout the development process.',
+      title: t('why.features.fastTransparent.title'),
+      description: t('why.features.fastTransparent.description'),
       color: 'from-blue-500 to-cyan-600'
     },
     {
       icon: Brain,
-      title: 'Expertise in IT & AI',
-      description: 'Deep knowledge in artificial intelligence, machine learning, and modern web technologies.',
+      title: t('why.features.expertise.title'),
+      description: t('why.features.expertise.description'),
       color: 'from-purple-500 to-pink-600'
     },
     {
       icon: Users,
-      title: 'Tailored Approach',
-      description: 'Every solution is custom-built to match your specific business needs and goals.',
+      title: t('why.features.tailored.title'),
+      description: t('why.features.tailored.description'),
       color: 'from-orange-500 to-red-600'
     }
   ];
@@ -65,10 +67,10 @@ const WhyChooseUs = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Why Choose <span className="gradient-text">MonTech IT</span>
+            {t('why.title.part1')} <span className="gradient-text">{t('why.title.part2')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We deliver exceptional value through innovative solutions and proven methodologies
+            {t('why.subtitle')}
           </p>
         </motion.div>
 
@@ -118,19 +120,19 @@ const WhyChooseUs = () => {
         >
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">50+</div>
-            <div className="text-gray-600 font-medium">Projects Completed</div>
+            <div className="text-gray-600 font-medium">{t('why.stats.projects')}</div>
           </div>
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">98%</div>
-            <div className="text-gray-600 font-medium">Client Satisfaction</div>
+            <div className="text-gray-600 font-medium">{t('why.stats.satisfaction')}</div>
           </div>
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">24/7</div>
-            <div className="text-gray-600 font-medium">Support Available</div>
+            <div className="text-gray-600 font-medium">{t('why.stats.support')}</div>
           </div>
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">2x</div>
-            <div className="text-gray-600 font-medium">Faster Delivery</div>
+            <div className="text-gray-600 font-medium">{t('why.stats.delivery')}</div>
           </div>
         </motion.div>
 
@@ -143,7 +145,7 @@ const WhyChooseUs = () => {
           className="text-center mt-16"
         >
           <p className="text-lg text-gray-600 mb-6">
-            Experience the difference that expertise and dedication make
+            {t('why.bottomCta.text')}
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -154,7 +156,7 @@ const WhyChooseUs = () => {
             }}
             className="btn-primary"
           >
-            Start Your Project
+            {t('why.bottomCta.button')}
           </motion.button>
         </motion.div>
       </div>

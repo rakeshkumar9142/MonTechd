@@ -1,32 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, TrendingUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const CaseStudies = () => {
+  const { t } = useTranslation();
   const caseStudies = [
     {
-      title: 'E-commerce Chatbot',
+      title: t('cases.items.0.title'),
       company: 'TechStore Pro',
-      description: 'Implemented an AI-powered chatbot that increased customer engagement by 300% and reduced support tickets by 60%.',
+      description: t('cases.items.0.description'),
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      results: ['300% increase in engagement', '60% reduction in support tickets', '24/7 customer support'],
-      category: 'Chatbot'
+      results: [t('cases.items.0.results.0'), t('cases.items.0.results.1'), t('cases.items.0.results.2')],
+      category: t('cases.items.0.category')
     },
     {
-      title: 'AI-Powered Analytics Dashboard',
+      title: t('cases.items.1.title'),
       company: 'DataFlow Solutions',
-      description: 'Built a comprehensive analytics platform that provides real-time insights and automated reporting for business intelligence.',
+      description: t('cases.items.1.description'),
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      results: ['Real-time data processing', 'Automated reporting system', '50% faster decision making'],
-      category: 'AI Assistant'
+      results: [t('cases.items.1.results.0'), t('cases.items.1.results.1'), t('cases.items.1.results.2')],
+      category: t('cases.items.1.category')
     },
     {
-      title: 'High-Conversion Landing Page',
+      title: t('cases.items.2.title'),
       company: 'GrowthStart Inc',
-      description: 'Designed and developed a conversion-optimized landing page that increased lead generation by 250% and improved conversion rates.',
+      description: t('cases.items.2.description'),
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80',
-      results: ['250% increase in leads', 'Improved conversion rates', 'Mobile-optimized design'],
-      category: 'Landing Page'
+      results: [t('cases.items.2.results.0'), t('cases.items.2.results.1'), t('cases.items.2.results.2')],
+      category: t('cases.items.2.category')
     }
   ];
 
@@ -65,10 +67,10 @@ const CaseStudies = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Case <span className="gradient-text">Studies</span>
+            {t('cases.title.part1')} <span className="gradient-text">{t('cases.title.part2')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real results from real clients. See how we've transformed businesses with our innovative solutions.
+            {t('cases.subtitle')}
           </p>
         </motion.div>
 
@@ -134,7 +136,7 @@ const CaseStudies = () => {
                   whileHover={{ x: 5 }}
                   className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700 transition-colors duration-200"
                 >
-                  View Case Study
+                  {t('cases.viewButton')}
                   <ExternalLink className="ml-2" size={16} />
                 </motion.button>
               </div>
@@ -151,7 +153,7 @@ const CaseStudies = () => {
           className="text-center mt-16"
         >
           <p className="text-lg text-gray-600 mb-6">
-            Ready to join our success stories?
+            {t('cases.bottomCta.text')}
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -162,7 +164,7 @@ const CaseStudies = () => {
             }}
             className="btn-primary"
           >
-            Start Your Success Story
+            {t('cases.bottomCta.button')}
           </motion.button>
         </motion.div>
       </div>

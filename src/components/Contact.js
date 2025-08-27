@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { Send, Mail, MessageCircle, Phone, CheckCircle, AlertCircle } from 'lucide-react';
 import { databases, CONTACT_COLLECTION_ID, DATABASE_ID } from '../config/appwrite';
 import { ID } from 'appwrite';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -76,10 +78,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get in <span className="gradient-text">Touch</span>
+            {t('contact.title.part1')} <span className="gradient-text">{t('contact.title.part2')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss your project and see how we can help you achieve your goals.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -95,11 +97,10 @@ const Contact = () => {
             >
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Let's Start Your Project
+                  {t('contact.left.title')}
                 </h3>
                 <p className="text-gray-600 mb-8 leading-relaxed">
-                  Whether you need a chatbot, AI assistant, or a high-converting landing page, we're here to help. 
-                  Get in touch with us and let's discuss how we can automate and grow your business.
+                  {t('contact.left.text')}
                 </p>
               </div>
 
@@ -113,7 +114,7 @@ const Contact = () => {
                   className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-colors duration-200"
                 >
                   <MessageCircle size={24} />
-                  <span>Chat on Telegram</span>
+                  <span>{t('contact.methods.telegram')}</span>
                 </motion.button>
 
                 {/* WhatsApp */}
@@ -124,7 +125,7 @@ const Contact = () => {
                   className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-colors duration-200"
                 >
                   <Phone size={24} />
-                  <span>Message on WhatsApp</span>
+                  <span>{t('contact.methods.whatsapp')}</span>
                 </motion.button>
 
                 {/* Email */}
@@ -135,29 +136,29 @@ const Contact = () => {
                   className="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-colors duration-200"
                 >
                   <Mail size={24} />
-                  <span>Send Email</span>
+                  <span>{t('contact.methods.email')}</span>
                 </motion.button>
               </div>
 
               {/* Additional Info */}
               <div className="bg-gradient-to-br from-primary-50 to-purple-50 p-6 rounded-xl">
-                <h4 className="font-bold text-gray-900 mb-3">Why Choose Us?</h4>
+                <h4 className="font-bold text-gray-900 mb-3">{t('contact.why.title')}</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Free consultation and project assessment
+                    {t('contact.why.items.0')}
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Transparent pricing and timelines
+                    {t('contact.why.items.1')}
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Ongoing support and maintenance
+                    {t('contact.why.items.2')}
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Performance-based results guarantee
+                    {t('contact.why.items.3')}
                   </li>
                 </ul>
               </div>
@@ -172,14 +173,14 @@ const Contact = () => {
               className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send us a Message
+                {t('contact.form.title')}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    {t('contact.form.nameLabel')}
                   </label>
                   <input
                     type="text"
@@ -189,14 +190,14 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="Enter your full name"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
 
                 {/* Email Field */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('contact.form.emailLabel')}
                   </label>
                   <input
                     type="email"
@@ -206,14 +207,14 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="Enter your email address"
+                    placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
 
                 {/* Message Field */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Project Details *
+                    {t('contact.form.messageLabel')}
                   </label>
                   <textarea
                     id="message"
@@ -223,7 +224,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200 resize-none"
-                    placeholder="Tell us about your project, requirements, and goals..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -235,7 +236,7 @@ const Contact = () => {
                     className="flex items-center space-x-2 text-green-600 bg-green-50 p-4 rounded-lg"
                   >
                     <CheckCircle size={20} />
-                                         <span> Hi {submittedName}, your response has been received!</span>
+                    <span>{t('contact.form.success', { name: submittedName })}</span>
                   </motion.div>
                 )}
 
@@ -246,7 +247,7 @@ const Contact = () => {
                     className="flex items-center space-x-2 text-red-600 bg-red-50 p-4 rounded-lg"
                   >
                     <AlertCircle size={20} />
-                    <span>Something went wrong. Please try again or contact us directly.</span>
+                    <span>{t('contact.form.error')}</span>
                   </motion.div>
                 )}
 
@@ -261,12 +262,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
+                      <span>{t('contact.form.sending')}</span>
                     </>
                   ) : (
                     <>
                       <Send size={20} />
-                      <span>Send Message</span>
+                      <span>{t('contact.form.submit')}</span>
                     </>
                   )}
                 </motion.button>

@@ -1,0 +1,108 @@
+{
+    "services": "Services",
+    "whyUs": "Why Us",
+    "cases": "Cases",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "getAQuote": "Get a Quote",
+    "nav": {"services": "Services", "whyUs": "Why Us", "cases": "Cases", "reviews": "Reviews", "contact": "Contact"},
+    "hero": {
+        "headline1": "Chatbots, AI Assistants &",
+        "headlineHighlight": "Landing Pages",
+        "headline2": "for Your Business",
+        "subheadline": "MonTech IT — automation, growth & new opportunities",
+        "features": {
+            "aiPowered": "AI-Powered",
+            "fast": "Fast & Efficient",
+            "global": "Global Reach"
+        }
+    },
+    "servicesSection": {
+        "title": {"part1": "Our", "part2": "Services"},
+        "subtitle": "Comprehensive solutions to automate and grow your business with cutting-edge technology",
+        "cards": {
+            "chatbots": {
+                "title": "Chatbots",
+                "description": "Customer support automation with seamless integration for Telegram, WhatsApp, and other platforms.",
+                "features": ["24/7 Support", "Multi-platform", "Smart Responses", "Easy Integration"]
+            },
+            "ai": {
+                "title": "AI Assistants",
+                "description": "Smart business helpers with personalized solutions to streamline your operations.",
+                "features": ["Personalized AI", "Process Automation", "Data Analysis", "Smart Insights"]
+            },
+            "landing": {
+                "title": "Landing Pages",
+                "description": "High-conversion websites designed for maximum sales and promotion effectiveness.",
+                "features": ["High Conversion", "Mobile Optimized", "SEO Friendly", "Fast Loading"]
+            }
+        },
+        "bottomCta": {"text": "Ready to transform your business with our services?", "button": "Get Started Today"}
+    },
+    "common": {"learnMore": "Learn More"},
+    "why": {
+        "title": {"part1": "Why Choose", "part2": "MonTech IT"},
+        "subtitle": "We deliver exceptional value through innovative solutions and proven methodologies",
+        "features": {
+            "payAfter": {"title": "Pay Only After Results", "description": "We believe in performance-based pricing. You only pay when you see tangible results and ROI."},
+            "fastTransparent": {"title": "Fast & Transparent Workflow", "description": "Quick turnaround times with complete transparency throughout the development process."},
+            "expertise": {"title": "Expertise in IT & AI", "description": "Deep knowledge in artificial intelligence, machine learning, and modern web technologies."},
+            "tailored": {"title": "Tailored Approach", "description": "Every solution is custom-built to match your specific business needs and goals."}
+        },
+        "stats": {"projects": "Projects Completed", "satisfaction": "Client Satisfaction", "support": "Support Available", "delivery": "Faster Delivery"},
+        "bottomCta": {"text": "Experience the difference that expertise and dedication make", "button": "Start Your Project"}
+    },
+    "cases": {
+        "title": {"part1": "Case", "part2": "Studies"},
+        "subtitle": "Real results from real clients. See how we've transformed businesses with our innovative solutions.",
+        "viewButton": "View Case Study",
+        "items": [
+            {"title": "E-commerce Chatbot", "description": "Implemented an AI-powered chatbot that increased customer engagement by 300% and reduced support tickets by 60%.", "results": ["300% increase in engagement", "60% reduction in support tickets", "24/7 customer support"], "category": "Chatbot"},
+            {"title": "AI-Powered Analytics Dashboard", "description": "Built a comprehensive analytics platform that provides real-time insights and automated reporting for business intelligence.", "results": ["Real-time data processing", "Automated reporting system", "50% faster decision making"], "category": "AI Assistant"},
+            {"title": "High-Conversion Landing Page", "description": "Designed and developed a conversion-optimized landing page that increased lead generation by 250% and improved conversion rates.", "results": ["250% increase in leads", "Improved conversion rates", "Mobile-optimized design"], "category": "Landing Page"}
+        ],
+        "bottomCta": {"text": "Ready to join our success stories?", "button": "Start Your Success Story"}
+    },
+    "reviews": {
+        "title": {"part1": "Client", "part2": "Reviews"},
+        "subtitle": "Don't just take our word for it. Here's what our clients have to say about working with MonTech IT.",
+        "stats": {"satisfaction": "Satisfaction Rate", "average": "Average Rating", "clients": "Happy Clients", "success": "Project Success"}
+    },
+    "cta": {
+        "title": "Ready to automate your business?",
+        "subtitle": "Join hundreds of businesses that have transformed their operations with our AI-powered solutions",
+        "benefits": {
+            "fast": {"title": "Fast Implementation", "text": "Get your solution up and running in days, not months"},
+            "results": {"title": "Proven Results", "text": "See measurable improvements in efficiency and ROI"},
+            "scalable": {"title": "Scalable Growth", "text": "Solutions that grow with your business needs"}
+        },
+        "trusted": "Trusted by leading companies worldwide"
+    },
+    "contact": {
+        "title": {"part1": "Get in", "part2": "Touch"},
+        "subtitle": "Ready to transform your business? Let's discuss your project and see how we can help you achieve your goals.",
+        "left": {
+            "title": "Let's Start Your Project",
+            "text": "Whether you need a chatbot, AI assistant, or a high-converting landing page, we're here to help. Get in touch with us and let's discuss how we can automate and grow your business."
+        },
+        "methods": {"telegram": "Chat on Telegram", "whatsapp": "Message on WhatsApp", "email": "Send Email"},
+        "why": {"title": "Why Choose Us?", "items": ["Free consultation and project assessment", "Transparent pricing and timelines", "Ongoing support and maintenance", "Performance-based results guarantee"]},
+        "form": {
+            "title": "Send us a Message",
+            "nameLabel": "Full Name *",
+            "namePlaceholder": "Enter your full name",
+            "emailLabel": "Email Address *",
+            "emailPlaceholder": "Enter your email address",
+            "messageLabel": "Project Details *",
+            "messagePlaceholder": "Tell us about your project, requirements, and goals...",
+            "sending": "Sending...",
+            "submit": "Send Message",
+            "success": "Hi {{name}}, your response has been received!",
+            "error": "Something went wrong. Please try again or contact us directly."
+        }
+    },
+    "footer": {
+        "copyright": "© 2024 MonTech IT. All rights reserved."
+    }
+}
+  

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -72,10 +74,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Client <span className="gradient-text">Reviews</span>
+            {t('reviews.title.part1')} <span className="gradient-text">{t('reviews.title.part2')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about working with MonTech IT.
+            {t('reviews.subtitle')}
           </p>
         </motion.div>
 
@@ -175,19 +177,19 @@ const Testimonials = () => {
         >
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">98%</div>
-            <div className="text-gray-600 font-medium">Satisfaction Rate</div>
+            <div className="text-gray-600 font-medium">{t('reviews.stats.satisfaction')}</div>
           </div>
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">4.9/5</div>
-            <div className="text-gray-600 font-medium">Average Rating</div>
+            <div className="text-gray-600 font-medium">{t('reviews.stats.average')}</div>
           </div>
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">50+</div>
-            <div className="text-gray-600 font-medium">Happy Clients</div>
+            <div className="text-gray-600 font-medium">{t('reviews.stats.clients')}</div>
           </div>
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold gradient-text">100%</div>
-            <div className="text-gray-600 font-medium">Project Success</div>
+            <div className="text-gray-600 font-medium">{t('reviews.stats.success')}</div>
           </div>
         </motion.div>
       </div>

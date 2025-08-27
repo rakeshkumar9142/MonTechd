@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const { t, i18n } = useTranslation();
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -42,18 +44,28 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {['Services', 'Why Us', 'Cases', 'Reviews', 'Contact'].map((item) => (
+          <div className="hidden md:flex space-x-8 items-center">
+            {[{ key: 'services', label: t('nav.services') }, { key: 'why-us', label: t('nav.whyUs') }, { key: 'cases', label: t('nav.cases') }, { key: 'reviews', label: t('nav.reviews') }, { key: 'contact', label: t('nav.contact') }].map((item) => (
               <motion.button
-                key={item}
+                key={item.key}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                onClick={() => scrollToSection(item.key)}
               >
-                {item}
+                {item.label}
               </motion.button>
             ))}
+
+            <select
+              className="ml-4 border border-gray-300 rounded-md px-2 py-1 text-sm"
+              value={i18n.language}
+              onChange={(e) => i18n.changeLanguage(e.target.value)}
+            >
+              <option value="en">EN</option>
+              <option value="hi">HI</option>
+              <option value="ru">RU</option>
+            </select>
           </div>
 
           {/* CTA Button */}
@@ -84,13 +96,13 @@ const Navbar = () => {
             className="md:hidden bg-white border-t border-gray-200"
           >
             <div className="py-4 space-y-4">
-              {['Services', 'Why Us', 'Cases', 'Reviews', 'Contact'].map((item) => (
+              {[{ key: 'services', label: t('nav.services') }, { key: 'why-us', label: t('nav.whyUs') }, { key: 'cases', label: t('nav.cases') }, { key: 'reviews', label: t('nav.reviews') }, { key: 'contact', label: t('nav.contact') }].map((item) => (
                 <button
-                  key={item}
+                  key={item.key}
                   className="block w-full text-left px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                  onClick={() => scrollToSection(item.key)}
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
               <div className="px-4 pt-4">
@@ -98,8 +110,19 @@ const Navbar = () => {
                   className="w-full btn-primary"
                   onClick={() => scrollToSection('contact')}
                 >
-                  Get a Quote
+                  {t('getAQuote')}
                 </button>
+              </div>
+              <div className="px-4">
+                <select
+                  className="w-full border border-gray-300 rounded-md px-2 py-2 text-sm"
+                  value={i18n.language}
+                  onChange={(e) => i18n.changeLanguage(e.target.value)}
+                >
+                  <option value="en">EN</option>
+                  <option value="hi">HI</option>
+                  <option value="ru">RU</option>
+                </select>
               </div>
             </div>
           </motion.div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Target, TrendingUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const CallToAction = () => {
+  const { t } = useTranslation();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -29,11 +31,11 @@ const CallToAction = () => {
         >
           {/* Main CTA */}
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Ready to automate your business?
+            {t('cta.title')}
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join hundreds of businesses that have transformed their operations with our AI-powered solutions
+            {t('cta.subtitle')}
           </p>
 
           {/* CTA Button */}
@@ -43,7 +45,7 @@ const CallToAction = () => {
             onClick={scrollToContact}
             className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 mb-12"
           >
-            Get a Quote
+            {t('getAQuote')}
             <ArrowRight className="ml-2 inline-block" size={20} />
           </motion.button>
 
@@ -59,8 +61,8 @@ const CallToAction = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="text-white" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Fast Implementation</h3>
-              <p className="text-white/80">Get your solution up and running in days, not months</p>
+              <h3 className="text-xl font-bold text-white mb-2">{t('cta.benefits.fast.title')}</h3>
+              <p className="text-white/80">{t('cta.benefits.fast.text')}</p>
             </motion.div>
 
             <motion.div
@@ -73,8 +75,8 @@ const CallToAction = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="text-white" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Proven Results</h3>
-              <p className="text-white/80">See measurable improvements in efficiency and ROI</p>
+              <h3 className="text-xl font-bold text-white mb-2">{t('cta.benefits.results.title')}</h3>
+              <p className="text-white/80">{t('cta.benefits.results.text')}</p>
             </motion.div>
 
             <motion.div
@@ -87,8 +89,8 @@ const CallToAction = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="text-white" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Scalable Growth</h3>
-              <p className="text-white/80">Solutions that grow with your business needs</p>
+              <h3 className="text-xl font-bold text-white mb-2">{t('cta.benefits.scalable.title')}</h3>
+              <p className="text-white/80">{t('cta.benefits.scalable.text')}</p>
             </motion.div>
           </div>
 
@@ -100,7 +102,7 @@ const CallToAction = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16 pt-8 border-t border-white/20"
           >
-            <p className="text-white/70 text-sm mb-4">Trusted by leading companies worldwide</p>
+            <p className="text-white/70 text-sm mb-4">{t('cta.trusted')}</p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
               <div className="text-white/50 text-lg font-semibold">TechStore Pro</div>
               <div className="text-white/50 text-lg font-semibold">DataFlow Solutions</div>

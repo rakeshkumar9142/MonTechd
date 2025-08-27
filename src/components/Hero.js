@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Bot, Zap, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -9,6 +10,8 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const { t } = useTranslation();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -47,10 +50,10 @@ const Hero = () => {
             variants={itemVariants}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
           >
-            Chatbots, AI Assistants &{' '}
-            <span className="gradient-text">Landing Pages</span>
+            {t('hero.headline1')}{' '}
+            <span className="gradient-text">{t('hero.headlineHighlight')}</span>
             <br />
-            for Your Business
+            {t('hero.headline2')}
           </motion.h1>
 
           {/* Subheadline */}
@@ -58,7 +61,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            MonTech IT — automation, growth & new opportunities
+            {t('hero.subheadline')}
           </motion.p>
 
           {/* CTA Button */}
@@ -69,7 +72,7 @@ const Hero = () => {
             onClick={scrollToContact}
             className="btn-primary text-lg px-10 py-4 mb-12"
           >
-            Get a Quote
+            {t('getAQuote')}
             <ArrowRight className="ml-2 inline-block" size={20} />
           </motion.button>
 
@@ -83,21 +86,21 @@ const Hero = () => {
               className="flex flex-col items-center space-y-2"
             >
               <Bot size={32} />
-              <span className="text-sm font-medium">AI-Powered</span>
+              <span className="text-sm font-medium">{t('hero.features.aiPowered')}</span>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1, color: '#3b82f6' }}
               className="flex flex-col items-center space-y-2"
             >
               <Zap size={32} />
-              <span className="text-sm font-medium">Fast & Efficient</span>
+              <span className="text-sm font-medium">{t('hero.features.fast')}</span>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.1, color: '#3b82f6' }}
               className="flex flex-col items-center space-y-2"
             >
               <Globe size={32} />
-              <span className="text-sm font-medium">Global Reach</span>
+              <span className="text-sm font-medium">{t('hero.features.global')}</span>
             </motion.div>
           </motion.div>
         </motion.div>

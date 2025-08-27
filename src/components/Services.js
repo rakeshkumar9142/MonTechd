@@ -1,26 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Bot, Globe, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: MessageCircle,
-      title: 'Chatbots',
-      description: 'Customer support automation with seamless integration for Telegram, WhatsApp, and other platforms.',
-      features: ['24/7 Support', 'Multi-platform', 'Smart Responses', 'Easy Integration']
+      title: t('servicesSection.cards.chatbots.title'),
+      description: t('servicesSection.cards.chatbots.description'),
+      features: [t('servicesSection.cards.chatbots.features.0'), t('servicesSection.cards.chatbots.features.1'), t('servicesSection.cards.chatbots.features.2'), t('servicesSection.cards.chatbots.features.3')]
     },
     {
       icon: Bot,
-      title: 'AI Assistants',
-      description: 'Smart business helpers with personalized solutions to streamline your operations.',
-      features: ['Personalized AI', 'Process Automation', 'Data Analysis', 'Smart Insights']
+      title: t('servicesSection.cards.ai.title'),
+      description: t('servicesSection.cards.ai.description'),
+      features: [t('servicesSection.cards.ai.features.0'), t('servicesSection.cards.ai.features.1'), t('servicesSection.cards.ai.features.2'), t('servicesSection.cards.ai.features.3')]
     },
     {
       icon: Globe,
-      title: 'Landing Pages',
-      description: 'High-conversion websites designed for maximum sales and promotion effectiveness.',
-      features: ['High Conversion', 'Mobile Optimized', 'SEO Friendly', 'Fast Loading']
+      title: t('servicesSection.cards.landing.title'),
+      description: t('servicesSection.cards.landing.description'),
+      features: [t('servicesSection.cards.landing.features.0'), t('servicesSection.cards.landing.features.1'), t('servicesSection.cards.landing.features.2'), t('servicesSection.cards.landing.features.3')]
     }
   ];
 
@@ -59,10 +62,10 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our <span className="gradient-text">Services</span>
+            {t('servicesSection.title.part1')} <span className="gradient-text">{t('servicesSection.title.part2')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive solutions to automate and grow your business with cutting-edge technology
+            {t('servicesSection.subtitle')}
           </p>
         </motion.div>
 
@@ -111,7 +114,7 @@ const Services = () => {
                 whileHover={{ x: 5 }}
                 className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700 transition-colors duration-200"
               >
-                Learn More
+                {t('common.learnMore')}
                 <ArrowRight className="ml-2" size={16} />
               </motion.button>
             </motion.div>
@@ -127,7 +130,7 @@ const Services = () => {
           className="text-center mt-16"
         >
           <p className="text-lg text-gray-600 mb-6">
-            Ready to transform your business with our services?
+            {t('servicesSection.bottomCta.text')}
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -138,7 +141,7 @@ const Services = () => {
             }}
             className="btn-primary"
           >
-            Get Started Today
+            {t('servicesSection.bottomCta.button')}
           </motion.button>
         </motion.div>
       </div>
